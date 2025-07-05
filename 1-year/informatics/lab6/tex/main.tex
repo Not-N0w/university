@@ -1,0 +1,45 @@
+\documentclass[a4paper]{article}
+
+\usepackage{soulutf8}
+\usepackage{graphicx}
+
+\usepackage[utf8]{inputenc} % Кодировка UTF-8
+\usepackage[russian]{babel} % Поддержка русского языка
+\usepackage{amsmath,amssymb}
+
+\usepackage{blindtext}
+\usepackage{multicol}
+
+\usepackage{geometry}
+\geometry{left=15mm}
+\geometry{right=15mm}
+\geometry{top=25mm}
+\geometry{bottom=25mm}
+
+\usepackage{makecell}
+\usepackage{lettrine}
+\usepackage{eso-pic}
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{rotating}
+
+\usepackage{fancyhdr} 
+
+\renewcommand{\LARGE}{\fontsize{25}{40pt}\selectfont}
+\renewcommand{\large}{\fontsize{16}{16pt}\selectfont}
+
+\parindent=5cm
+\usepackage{multirow}% http://ctan.org/pkg/multirow
+
+
+\begin{document}
+\linespread{1.6}
+\input{tit.tex}
+\newpage
+\linespread{1}
+\input{task1.tex}
+\end{document}
+
+% Увеличить параграф \parindent=2cm
+% Подписать формулы и сослаться в тексте equation
+% Объеденить столбцы в таблице \multirow{2}{*}{R}

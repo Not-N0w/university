@@ -1,0 +1,208 @@
+ORG 0x400
+
+RES:
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0
+
+WORD 0x0
+WORD 0x0 ; 421
+
+LENGTH: WORD 0x11
+CNT: WORD ?
+CURIND: WORD 0x4
+CUR: WORD 0x6cf
+CURRES: WORD 0x400
+TMP1: WORD 0x0
+TMP2: WORD 0x0
+TRES1: WORD 0x0
+TRES2: WORD 0x0
+SMASK: WORD 0x0100
+FILL: WORD 0xFE00
+FULL: WORD 0xFFFF
+CNST: WORD 0x00BB
+
+START:
+    CLA
+    LD LENGTH
+    ST CNT
+
+CYCLE:
+    LD (CUR)+
+    ST TMP1
+
+    LD TMP1
+    AND SMASK
+
+    BEQ SKIP
+    LD TMP1
+    OR FILL
+    ST TMP1
+    LD FULL
+    ST TMP2
+    ; SIGNED 32 - TMP2_TMP1 and result in TRES2_TRES1
+SKIP:           
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+    
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+    LD TRES1
+    ADD TMP1
+    ST TRES1
+    LD TRES2
+    ADC TMP2
+    ST TRES2
+
+
+    ; * 11 (2)
+    LD TRES1
+    ADD CNST
+    ST TRES1
+    LD TRES2
+    ADC #0x0
+    ST TRES2
+    ; done formula
+
+    LD TRES1
+    ST (CURRES)+
+    LD TRES2
+    ST (CURRES)+
+    LD (CURIND)+ ; просто на всякий храню тк начинается нумерация с 4
+    LD #0x0
+    ST TRES1
+    ST TRES2
+    ST TMP1
+    ST TMP2
+    LOOP CNT
+    JUMP CYCLE
+HLT;
+
+ORG 0x6cf
+WORD 0x01FF    ; -1 => -11 + 187 = 176 (00B0)
+WORD 0x1       ;  1 =>  11 + 187 = 198 (00C6)
+WORD 0x01F1    ;-15 => -15*11 + 187 = 22 (0016)
+WORD 0x01EC    ;-20 => -20*11 + 187 = -33 (FFFF_FFFF_FFFF_FFDF)
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0
+WORD 0x0

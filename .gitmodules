@@ -1,0 +1,24 @@
+[submodule "1-year/informatics/lab4"]
+	path = 1-year/informatics/lab4
+	url = https://github.com/Not-N0w/xml-yml-converter-lab4.git
+	branch = main
+[submodule "1-year/programming/lab34"]
+	path = 1-year/programming/lab34
+	url = https://github.com/Not-N0w/lab_34.git
+	branch = main
+[submodule "1-year/programming/lab5"]
+	path = 1-year/programming/lab5
+	url = https://github.com/Not-N0w/collection-manager-lab5.git
+	branch = main
+[submodule "1-year/programming/lab6"]
+	path = 1-year/programming/lab6
+	url = https://github.com/Not-N0w/collection-manager-lab6.git
+	branch = main
+[submodule "1-year/programming/lab7"]
+	path = 1-year/programming/lab7
+	url = https://github.com/Not-N0w/collection-manager-lab7.git
+	branch = main
+[submodule "1-year/programming/ticket-manager-lab8"]
+	path = 1-year/programming/ticket-manager-lab8
+	url = https://github.com/Not-N0w/ticket-manager.git
+	branch = main
