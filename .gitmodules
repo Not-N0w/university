@@ -13,11 +13,11 @@
 [submodule "1-year/programming/lab6"]
 	path = 1-year/programming/lab6
 	url = https://github.com/Not-N0w/collection-manager-lab6.git
-	branch = main
+	branch = master
 [submodule "1-year/programming/lab7"]
 	path = 1-year/programming/lab7
 	url = https://github.com/Not-N0w/collection-manager-lab7.git
-	branch = main
+	branch = master
 [submodule "1-year/programming/ticket-manager-lab8"]
 	path = 1-year/programming/ticket-manager-lab8
 	url = https://github.com/Not-N0w/ticket-manager.git
