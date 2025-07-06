@@ -22,3 +22,7 @@
 	path = 1-year/programming/ticket-manager-lab8
 	url = https://github.com/Not-N0w/ticket-manager.git
 	branch = main
+[submodule "1-year/programming/lab2"]
+	path = 1-year/programming/lab2
+	url = https://github.com/Not-N0w/pokemons-lab2.git
+	branch = main
