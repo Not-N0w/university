@@ -25,4 +25,4 @@
 [submodule "1-year/programming/lab2"]
 	path = 1-year/programming/lab2
 	url = https://github.com/Not-N0w/pokemons-lab2.git
-	branch = main
+	branch = master
